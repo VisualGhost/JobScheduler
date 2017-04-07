@@ -28,6 +28,9 @@ public class MyService extends JobService {
                 String data = bundle.getString(MainActivity.JOB_DATA_KEY);
                 SystemClock.sleep(1000 * 60);
                 sendNotification(data);
+
+                //!!! Don't forget
+                jobFinished(jobParameters, false);
             }
         });
         return true;
